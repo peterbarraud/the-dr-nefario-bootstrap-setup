@@ -24,6 +24,8 @@ So, let's say you have an entity like user (let's call this `app user`). What yo
     1. `appuser` (see the example in this repo)
     2. `appusercollection`
 
+**Note**: We have one interesting field - a `timestamp` field. If you have a timestamp field, we recommend that you us the `_ts` suffix for the field time. We will then update that field for any update to a table entry. If you make a new entry, you should not set the timestamp field - we will make the timestamp entry. If you update the entry, we will update the timestamp entry.
+
 Notes for objects:
 1. The **object** class constructor takes a single (optional) parameter.
     1. ID will return the complete object (as per the corresponding database entity). Update any property and hit save (`{object}->Save();`) and you have an updated database entry
