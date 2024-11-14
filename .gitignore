@@ -5,4 +5,5 @@ backoffice/mariadb.min/data/ib_logfile*
 backoffice/mariadb.min/data/ibdata1
 backoffice/mariadb.min/data/aria_log*
 backoffice/mariadb.min/data/*.err
+mdb.running
 backoffice/mariadb.min/data/ib_buffer_pool
