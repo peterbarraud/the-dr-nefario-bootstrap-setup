@@ -42,7 +42,15 @@ document.querySelector("#login").addEventListener("click", (e) => {
      })})
     .then(response => response.json())
     .then(data => {
-      document.querySelector('#responses').textContent = data;
+      if (data[0]){
+        document.querySelector('#sign-in').classList.add('hidesection');
+        document.querySelector('#logged-in-user-section').classList.remove('hidesection');
+        document.querySelector('#logged-in-user-section').classList.add('showsection');
+        document.querySelector('#logged-in-user-response').textContent = data;
+      } else {
+        document.querySelector('#responses').textContent = data[1];
+      }
+      
     })
     .catch((err) => {
       console.log(err);

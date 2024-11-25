@@ -28,9 +28,9 @@
       );
       $appusercollection = new appusercollection($filter);
       if ($appusercollection->length()){
-        echo json_encode("Valid user");
+        echo json_encode([1,"Valid user"]);
       } else {
-        echo json_encode("Invalid user");
+        echo json_encode([0,"Invalid user"]);
       }
     }
   }
