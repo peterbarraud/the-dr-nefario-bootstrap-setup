@@ -20,7 +20,7 @@ let balanceData = [];
 
 let restURL = 'http://localhost:8089/services/rest.api.php';
 
-window.onload = function(){
+window.onload = () => {
   if(window.location.href.includes("localhost")){
     restURL = 'http://localhost:8089/services/rest.api.php'
   } else {
@@ -28,7 +28,7 @@ window.onload = function(){
   }
 };
 
-document.querySelector("#login").addEventListener("click", function (e) {
+document.querySelector("#login").addEventListener("click", (e) => {
   let userName = document.querySelector("#user-name").value;
   let password = document.querySelector("#password").value;
   if (userName && password){
@@ -52,7 +52,7 @@ document.querySelector("#login").addEventListener("click", function (e) {
   }
 });
 
-document.querySelector("#add-user").addEventListener("click", function (e) {
+document.querySelector("#add-user").addEventListener("click", (e) => {
   let userName = document.querySelector("#user-name").value;
   let password = document.querySelector("#password").value;
   if (userName && password){
@@ -76,7 +76,7 @@ document.querySelector("#add-user").addEventListener("click", function (e) {
   }
 });
 
-document.querySelector("#get-users").addEventListener("click", function (e) {
+document.querySelector("#get-users").addEventListener("click", (e) => {
   fetch(`${restURL}/getuserlist/`, {
     method: "GET",
   })
@@ -93,7 +93,7 @@ document.querySelector("#get-users").addEventListener("click", function (e) {
   })  
 });
 
-document.querySelector("#get-user").addEventListener("click", function (e) {
+document.querySelector("#get-user").addEventListener("click", (e) => {
   fetch(`${restURL}/getuserbyid/1`, {
     method: "GET",
   })
