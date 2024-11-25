@@ -4,6 +4,9 @@
 1. Clone this repo
 1. Start mariadb with: `db.start.bat`
 1. Sign into mariadb with: `login.root.bat`
+1. Use `backoffice/services/db.sql` to create the basic database structures.
+    
+    *You will, obviously change these are per your requirements.*
 1. Create a database using `create database test`
 1. Create a table using `test.sql`
 1. Start the php server using: `php.start.bat`
