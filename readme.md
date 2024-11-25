@@ -1,7 +1,7 @@
 # The Dr. Nefario setup
 (Why?. Because I love that scene in `Despicable me` where `Dr. Nefario` packs all his stuff in one little suitcase and leaves)
 
-(Preferably run the steps upto 4 in `Git bash`)
+(Preferably run the steps 1 to 3 in `Git bash`)
 1. Clone this repo
 1. cd into the resultant folder
 1. Run the following commands to get the Dr. Nefario servers
