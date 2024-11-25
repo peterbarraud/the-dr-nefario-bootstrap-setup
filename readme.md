@@ -1,18 +1,27 @@
 # The Dr. Nefario setup
 (Why?. Because I love that scene in `Despicable me` where `Dr. Nefario` packs all his stuff in one little suitcase and leaves)
 
+(Preferably run the steps upto 4 in `Git bash`)
 1. Clone this repo
-1. Start mariadb with: `db.start.bat`
+1. cd into the resultant folder
+1. Run the following commands to get the Dr. Nefario servers
+```
+git clone https://github.com/peterbarraud/the.dr.nefario.servers.git
+mv the.dr.nefario.servers/mariadb.min/ backoffice/
+mv the.dr.nefario.servers/php.min/ backoffice/
+rm -fr the.dr.nefario.servers/
+```
+4. Start mariadb with: `db.start.bat`
 1. Sign into mariadb with: `login.root.bat`
 1. Use `backoffice/services/db.sql` to create the basic database structures.
-    
+
     *You will, obviously change these are per your requirements.*
-1. Create a database using `create database test`
-1. Create a table using `test.sql`
+    
+    At any point, to export the databse simple run `export.db.bat` with the database name as the only arg. The <database name>.sql file is created in `backoffice/services` dir
+
 1. Start the php server using: `php.start.bat`
 1. Install the npm dependencies using `npm i`
 1. Start your website with `npm start`
-1. ~To use this as your website setup, you'll need to .gitignore the mariadb and php dirs from the backoffice folder
 
 ## Backoffice
 ### Object layer
